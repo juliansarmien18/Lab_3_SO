@@ -244,6 +244,11 @@ public class Main extends javax.swing.JFrame {
         btnR1.setFocusPainted(false);
         btnR1.setFocusable(false);
         btnR1.setRolloverEnabled(false);
+        btnR1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnR1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnR1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 30, 80));
 
         btnR5.setBackground(java.awt.Color.lightGray);
@@ -525,6 +530,10 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Ingrese el Nombre Correctamente");
         }
     }//GEN-LAST:event_btnCrearActionPerformed
+
+    private void btnR1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnR1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnR1ActionPerformed
 
     public void ReiniciarH(Proceso res){
         nuevo = new Proceso(res.getNombre(),"Listo",res.getTamaño(),res.getTiempo(),res.getBtn(),this);
