@@ -34,7 +34,7 @@ public class VistaPrincipalTemplate extends JFrame {
   private static final long serialVersionUID = 1L;
 
   // Declaración Objetos Gráficos
-  private JPanel pUno, pDos;
+  private JPanel pUno, pDos, pTres, pCuatro;
   private JLabel lTituloApp, lEslogan, lTituloLogin, lNotificaciones;
   private JLabel lFondo, lSvg1, lLogo, lUsuario, lClave, lFacebook, lTwitter, lYoutube;
   private JTextField tNombreUsuario;
@@ -66,55 +66,45 @@ public class VistaPrincipalTemplate extends JFrame {
     // fontMediana = new Font("LuzSans-Book", Font.PLAIN, 15);
     cMano = new Cursor(Cursor.HAND_CURSOR);
     bInferiorAzul = BorderFactory.createMatteBorder(0, 0, 2, 0, colorPrincipal);
-    iFondo = new ImageIcon("Clase3/resources/images/fondo.png");
-    iLogo = new ImageIcon("Clase3/resources/images/logo.png");
-    iUsuario2 = new ImageIcon("Clase3/resources/images/usuario2.png");
-    iClave2 = new ImageIcon("Clase3/resources/images/clave2.png");
-    iPunto1 = new ImageIcon("Clase3/resources/images/punto1.png");
-    iFacebook1 = new ImageIcon("Clase3/resources/images/facebook1.png");
-    iTwitter1 = new ImageIcon("Clase3/resources/images/twitter1.png");
-    iYoutube1 = new ImageIcon("Clase3/resources/images/youtube1.png");
-    iSvg1 = new ImageIcon("Clase3/resources/images/imagen1.png");
-    iCerrar = new ImageIcon("Clase3/resources/images/cerrar.png");
+ 
 
+    pUno = new JPanel();
+    pUno.setSize(400, 400);
+    pUno.setLocation(0, 0);
+    pUno.setBackground(Color.red);
+    pUno.setLayout(null);
+    this.add(pUno);
+    
     pDos = new JPanel();
-    pDos.setSize(600, 500);
-    pDos.setLocation(0, 0);
+    pDos.setSize(400, 400);
+    pDos.setLocation(400, 0);
     pDos.setBackground(Color.white);
     pDos.setLayout(null);
     this.add(pDos);
+    
+    pTres = new JPanel();
+    pTres.setSize(400, 400);
+    pTres.setLocation(400, 400);
+    pTres.setBackground(Color.blue);
+    pTres.setLayout(null);
+    this.add(pTres);
+    
+    pCuatro = new JPanel();
+    pCuatro.setSize(400, 400);
+    pCuatro.setLocation(0, 400);
+    pCuatro.setBackground(Color.green);
+    pCuatro.setLayout(null);
+    this.add(pCuatro);
 
-    pUno = new JPanel();
-    pUno.setSize(400, 500);
-    pUno.setLocation(600, 0);
-    pUno.setBackground(Color.white);
-    pUno.setLayout(null);
-    this.add(pUno);
-
-    iDimAux = new ImageIcon(
-      iLogo.getImage()
-        .getScaledInstance(40, 40, Image.SCALE_AREA_AVERAGING)
-    );
-
-    lLogo = new JLabel();
-    lLogo.setBounds(50, 20, 40, 40);
-    lLogo.setIcon(iDimAux);
-    pDos.add(lLogo);
-
+    
     lTituloApp = new JLabel("Login de Usuario");
     lTituloApp.setBounds(100, 20, 220, 30);
     lTituloApp.setForeground(Color.WHITE);
     lTituloApp.setFont(fontTPrincipal);
     pDos.add(lTituloApp);
 
-    iDimAux = new ImageIcon(
-      iSvg1.getImage()
-        .getScaledInstance(500, 345, Image.SCALE_AREA_AVERAGING)
-    );
-
     lSvg1 = new JLabel();
     lSvg1.setBounds(100, 100, 500, 345);
-    lSvg1.setIcon(iDimAux);
     pDos.add(lSvg1);
 
     lEslogan = new JLabel("Te ayudamos en todo");
@@ -141,24 +131,12 @@ public class VistaPrincipalTemplate extends JFrame {
     lNotificaciones.setHorizontalAlignment(SwingConstants.CENTER);
     pUno.add(lNotificaciones);
 
-    iDimAux = new ImageIcon(
-      iUsuario2.getImage()
-        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-    );
-
     lUsuario = new JLabel();
     lUsuario.setBounds(40, 140, 30, 30);
-    lUsuario.setIcon(iDimAux);
     pUno.add(lUsuario);
-
-    iDimAux = new ImageIcon(
-      iClave2.getImage()
-        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-    );
 
     lClave = new JLabel();
     lClave.setBounds(40, 270, 30, 30);
-    lClave.setIcon(iDimAux);
     pUno.add(lClave);
 
     tNombreUsuario = new JTextField("Nombre Usuario");
@@ -208,10 +186,6 @@ public class VistaPrincipalTemplate extends JFrame {
     bRegistrarse.setCursor(cMano);
     pUno.add(bRegistrarse);
     
-    iDimAux = new ImageIcon(
-      iCerrar.getImage()
-        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-    );
 
     bCerrar = new JButton();
     bCerrar.setBounds(350, 10, 45, 30);
@@ -219,21 +193,14 @@ public class VistaPrincipalTemplate extends JFrame {
     bCerrar.setBackground(Color.BLUE);
     bCerrar.setForeground(Color.WHITE);
     bCerrar.setCursor(cMano);
-    bCerrar.setIcon(iDimAux);
     bCerrar.setContentAreaFilled(false);
     bCerrar.setFocusable(false);
     bCerrar.setBorder(null);
     pUno.add(bCerrar);
 
-    iDimAux = new ImageIcon(
-      iPunto1.getImage()
-        .getScaledInstance(20, 20, Image.SCALE_AREA_AVERAGING)
-    );
-
     bOpcion1 = new JButton();
     bOpcion1.setBounds(10, 220, 30, 20);
     bOpcion1.setCursor(cMano);
-    bOpcion1.setIcon(iDimAux);
     bOpcion1.setContentAreaFilled(false);
     bOpcion1.setFocusable(false);
     bOpcion1.setBorder(null);
@@ -242,7 +209,6 @@ public class VistaPrincipalTemplate extends JFrame {
     bOpcion2 = new JButton();
     bOpcion2.setBounds(10, 250, 30, 20);
     bOpcion2.setCursor(cMano);
-    bOpcion2.setIcon(iDimAux);
     bOpcion2.setContentAreaFilled(false);
     bOpcion2.setFocusable(false);
     bOpcion2.setBorder(null);
@@ -251,53 +217,28 @@ public class VistaPrincipalTemplate extends JFrame {
     bOpcion3 = new JButton();
     bOpcion3.setBounds(10, 280, 30, 20);
     bOpcion3.setCursor(cMano);
-    bOpcion3.setIcon(iDimAux);
     bOpcion3.setContentAreaFilled(false);
     bOpcion3.setFocusable(false);
     bOpcion3.setBorder(null);
     pDos.add(bOpcion3);
 
-    iDimAux = new ImageIcon(
-      iFacebook1.getImage()
-        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-    );
-
     lFacebook = new JLabel();
     lFacebook.setBounds(20, 460, 30, 30);
-    lFacebook.setIcon(iDimAux);
     lFacebook.setCursor(cMano);
     pDos.add(lFacebook);
 
-    iDimAux = new ImageIcon(
-      iTwitter1.getImage()
-        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-    );
-
     lTwitter = new JLabel();
     lTwitter.setBounds(60, 460, 30, 30);
-    lTwitter.setIcon(iDimAux);
     lTwitter.setCursor(cMano);
     pDos.add(lTwitter);
 
-    iDimAux = new ImageIcon(
-      iYoutube1.getImage()
-        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-    );
-
     lYoutube = new JLabel();
     lYoutube.setBounds(100, 460, 30, 30);
-    lYoutube.setIcon(iDimAux);
     lYoutube.setCursor(cMano);
     pDos.add(lYoutube);
 
-    iDimAux = new ImageIcon(
-      iFondo.getImage()
-        .getScaledInstance(600, 600, Image.SCALE_AREA_AVERAGING)
-    );
-
     lFondo = new JLabel();
     lFondo.setBounds(0, 0, 600, 600);
-    lFondo.setIcon(iDimAux);
     pDos.add(lFondo);
 
     checkSi = new JCheckBox("Si");
@@ -322,7 +263,7 @@ public class VistaPrincipalTemplate extends JFrame {
 
     setLayout(null);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
-    setSize(1000, 500);
+    setSize(800, 800);
     setLocationRelativeTo(this);
     setUndecorated(true);
     setLayout(null);
