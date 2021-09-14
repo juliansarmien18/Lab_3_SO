@@ -9,7 +9,7 @@ import static java.lang.Math.ceil;
 
 /**
  *
- * @author Aran_
+ * @author SO 20211
  */
 public class Proceso extends Thread {
 

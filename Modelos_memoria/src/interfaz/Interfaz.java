@@ -5,14 +5,16 @@
  */
 package interfaz;
 
+import java.awt.Color;
 import logica.MemoriaVirtual;
 import logica.Proceso;
 import java.util.LinkedList;
 import java.util.Queue;
+import javax.swing.ButtonGroup;
 
 /**
  *
- * @author Aran_
+ * @author SO 20211
  */
 public class Interfaz extends javax.swing.JFrame {
 
@@ -42,17 +44,18 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
         jScrollPane5 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         labelTituloInformacion = new javax.swing.JLabel();
-        tamMemoriaP = new javax.swing.JTextField();
-        labelTamMP = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        tamMemoriaS = new javax.swing.JTextField();
-        labelTamPagina = new javax.swing.JLabel();
-        tamPag = new javax.swing.JTextField();
         establecer = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
         jPanel3 = new javax.swing.JPanel();
         labelInformacionGeneral = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -91,15 +94,10 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         cajaMensajes = new javax.swing.JTextArea();
-        labelTituloInformacion1 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         labelGestionarP1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         cajaMemoriaPrincipal = new javax.swing.JTextArea();
-        jPanel9 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        cajaMemoriaSecundaria = new javax.swing.JTextArea();
-        labelGestionarP2 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         labelGestionarP3 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -139,23 +137,7 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         labelTituloInformacion.setForeground(new java.awt.Color(255, 255, 255));
-        labelTituloInformacion.setText("INFORMACIÓN DE INICIO");
-
-        tamMemoriaP.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-
-        labelTamMP.setForeground(new java.awt.Color(255, 255, 255));
-        labelTamMP.setText("Tamaño de la memoria principal:");
-
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Tamaño de la memoria secundaria:");
-
-        tamMemoriaS.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-
-        labelTamPagina.setForeground(new java.awt.Color(255, 255, 255));
-        labelTamPagina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelTamPagina.setText("Tamaño de las páginas:");
-
-        tamPag.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        labelTituloInformacion.setText("MODELOS DE MEMORIA");
 
         establecer.setText("ESTABLECER");
         establecer.addActionListener(new java.awt.event.ActionListener() {
@@ -164,49 +146,81 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1 = new ButtonGroup();
+        jRadioButton1.setBackground(new java.awt.Color(51, 51, 51));
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setText("Dinamica compacta");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+        buttonGroup1.add(jRadioButton1);
+
+        jRadioButton2.setBackground(new java.awt.Color(51, 51, 51));
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton2.setText("Tamaño fijo");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        buttonGroup1.add(jRadioButton2);
+
+        jRadioButton3.setBackground(new java.awt.Color(51, 51, 51));
+        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton3.setText("Tamaño variable");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
+        buttonGroup1.add(jRadioButton3);
+
+        jRadioButton4.setBackground(new java.awt.Color(51, 51, 51));
+        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton4.setText("Particiones dinamicas");
+        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4ActionPerformed(evt);
+            }
+        });
+        buttonGroup1.add(jRadioButton4);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(labelTamMP)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tamMemoriaP)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tamMemoriaS)
-                        .addComponent(labelTamPagina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tamPag)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(establecer)
-                        .addGap(85, 85, 85))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(labelTituloInformacion)
-                        .addGap(68, 68, 68))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jRadioButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelTituloInformacion)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(establecer)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(31, 31, 31)
                 .addComponent(labelTituloInformacion)
-                .addGap(18, 18, 18)
-                .addComponent(labelTamMP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tamMemoriaP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addComponent(jRadioButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tamMemoriaS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(labelTamPagina)
+                .addComponent(jRadioButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tamPag, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jRadioButton4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(establecer)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -302,7 +316,7 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addComponent(labelInformacionGeneral)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,7 +355,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(labelMemoriaSD))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(51, 51, 51));
@@ -458,7 +472,7 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
-        ponerProcesoListo.setText("PONER LISTO");
+        ponerProcesoListo.setText("LISTO");
         ponerProcesoListo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ponerProcesoListoActionPerformed(evt);
@@ -505,7 +519,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(suspenderProceso)
                     .addComponent(ponerProcesoListo))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -533,8 +547,8 @@ public class Interfaz extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel7.setBackground(new java.awt.Color(51, 51, 51));
@@ -544,9 +558,6 @@ public class Interfaz extends javax.swing.JFrame {
         cajaMensajes.setRows(5);
         jScrollPane1.setViewportView(cajaMensajes);
 
-        labelTituloInformacion1.setForeground(new java.awt.Color(255, 255, 255));
-        labelTituloInformacion1.setText("CAJA DE MENSAJES");
-
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -555,17 +566,11 @@ public class Interfaz extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1)
                 .addContainerGap())
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addComponent(labelTituloInformacion1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelTituloInformacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(114, 114, 114))
         );
@@ -602,39 +607,6 @@ public class Interfaz extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
                 .addContainerGap())
-        );
-
-        jPanel9.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        cajaMemoriaSecundaria.setColumns(20);
-        cajaMemoriaSecundaria.setRows(5);
-        jScrollPane3.setViewportView(cajaMemoriaSecundaria);
-
-        labelGestionarP2.setForeground(new java.awt.Color(255, 255, 255));
-        labelGestionarP2.setText("MEMORIA SECUNDARIA");
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(labelGestionarP2)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelGestionarP2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
         );
 
         jPanel10.setBackground(new java.awt.Color(51, 51, 51));
@@ -675,6 +647,13 @@ public class Interfaz extends javax.swing.JFrame {
 
         jPanel11.setBackground(new java.awt.Color(51, 51, 51));
         jPanel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jBM1.setBackground(new java.awt.Color(255, 255, 255));
+        jBM1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBM1ActionPerformed(evt);
+            }
+        });
 
         jLabel10.setForeground(new java.awt.Color(240, 240, 240));
         jLabel10.setText("USO DE MEMORIA");
@@ -785,16 +764,14 @@ public class Interfaz extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(4, 4, 4)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -802,23 +779,21 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
-                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(119, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
 
         jScrollPane5.setViewportView(jPanel1);
@@ -831,7 +806,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 757, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -839,9 +814,9 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void establecerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_establecerActionPerformed
         try {
-            int tamañoMemoria = Integer.parseInt(this.tamMemoriaP.getText());
-            int tamañoSecundario = Integer.parseInt(this.tamMemoriaS.getText());
-            int tamañoPagina = Integer.parseInt(this.tamPag.getText());
+            int tamañoMemoria = 16777216;
+            int tamañoSecundario = 8388608;
+            int tamañoPagina = 699050;
             if ((tamañoMemoria % 2) == 0 && (tamañoSecundario % 2) == 0 && (tamañoPagina % 2) == 0) {
                 if (tamañoMemoria > tamañoPagina) {
                     this.memoriaVirtual = new MemoriaVirtual(tamañoMemoria, tamañoSecundario, tamañoPagina, this.cajaMensajes);
@@ -865,7 +840,6 @@ public class Interfaz extends javax.swing.JFrame {
             this.crearProceso.setEnabled(true);
             this.cajaMensajes.append("La simulacion de memoria virtual ha comenzado exitosamente\n");
             actualizarMemoriaPrincipal();
-            actualizarMemoriaSecundaria();
             this.idProceso.setEditable(true);
         } catch (Exception e) {
             this.cajaMensajes.append("El tamano de la memoria principal, secundaria y de las paginas debe ser expresado en numero enteros\n");
@@ -891,6 +865,36 @@ public class Interfaz extends javax.swing.JFrame {
                         contadorProceso++;
                         this.labelCantProcesos.setText(Integer.toString(contadorProceso));
                         this.nombreProceso.setText("Proceso " + contadorProceso);
+                        int idp=contadorProceso;
+                        switch(idp){
+                            case 0:
+                                this.jBM8.setBackground(Color.green);
+                                break;
+                            case 1:   
+                                this.jBM9.setBackground(Color.green);
+                                break;
+                            case 2:   
+                                this.jBM10.setBackground(Color.green);
+                                break;
+                            case 3:   
+                                this.jBM11.setBackground(Color.green);
+                                break;
+                            case 4:   
+                                this.jBM12.setBackground(Color.green);
+                                break;
+                            case 5:   
+                                this.jBM13.setBackground(Color.green);
+                                break;
+                            case 6:   
+                                this.jBM14.setBackground(Color.green);
+                                break;    
+                            case 7:   
+                                this.jBM15.setBackground(Color.green);
+                                break;    
+                            case 8:   
+                                this.jBM16.setBackground(Color.green);
+                                break;  
+                        }
                         actualizar();
 
                     } else {
@@ -919,6 +923,36 @@ public class Interfaz extends javax.swing.JFrame {
                     this.bloquearProceso.setEnabled(false);
                     this.suspenderProceso.setEnabled(true);
                     this.ponerProcesoListo.setEnabled(true);
+                    int idp=contadorProceso;
+                        switch(idp){
+                            case 0:
+                                this.jBM8.setBackground(Color.red);
+                                break;
+                            case 1:   
+                                this.jBM9.setBackground(Color.red);
+                                break;
+                            case 2:   
+                                this.jBM10.setBackground(Color.red);
+                                break;
+                            case 3:   
+                                this.jBM11.setBackground(Color.red);
+                                break;
+                            case 4:   
+                                this.jBM12.setBackground(Color.red);
+                                break;
+                            case 5:   
+                                this.jBM13.setBackground(Color.red);
+                                break;
+                            case 6:   
+                                this.jBM14.setBackground(Color.red);
+                                break;    
+                            case 7:   
+                                this.jBM15.setBackground(Color.red);
+                                break;    
+                            case 8:   
+                                this.jBM16.setBackground(Color.red);
+                                break;  
+                        }
                     actualizar();
                 }
                 //}
@@ -942,6 +976,36 @@ public class Interfaz extends javax.swing.JFrame {
                 this.ponerProcesoListo.setEnabled(false);
                 this.eliminarProceso.setEnabled(false);
                 this.bloquearProceso.setEnabled(false);
+                int idp=contadorProceso;
+                        switch(idp){
+                            case 0:
+                                this.jBM8.setBackground(Color.lightGray);
+                                break;
+                            case 1:   
+                                this.jBM9.setBackground(Color.lightGray);
+                                break;
+                            case 2:   
+                                this.jBM10.setBackground(Color.lightGray);
+                                break;
+                            case 3:   
+                                this.jBM11.setBackground(Color.lightGray);
+                                break;
+                            case 4:   
+                                this.jBM12.setBackground(Color.lightGray);
+                                break;
+                            case 5:   
+                                this.jBM13.setBackground(Color.lightGray);
+                                break;
+                            case 6:   
+                                this.jBM14.setBackground(Color.lightGray);
+                                break;    
+                            case 7:   
+                                this.jBM15.setBackground(Color.lightGray);
+                                break;    
+                            case 8:   
+                                this.jBM16.setBackground(Color.lightGray);
+                                break;  
+                        }
                 actualizar();
             } else {
                 this.cajaMensajes.append("* ALERTA: No se encontró ningún proceso con dicho ID\n");
@@ -961,6 +1025,36 @@ public class Interfaz extends javax.swing.JFrame {
                 ponerProcesoListo.setEnabled(false);
                 this.suspenderProceso.setEnabled(true);
                 this.bloquearProceso.setEnabled(true);
+                int idp=contadorProceso;
+                        switch(idp){
+                            case 0:
+                                this.jBM8.setBackground(Color.green);
+                                break;
+                            case 1:   
+                                this.jBM9.setBackground(Color.green);
+                                break;
+                            case 2:   
+                                this.jBM10.setBackground(Color.green);
+                                break;
+                            case 3:   
+                                this.jBM11.setBackground(Color.green);
+                                break;
+                            case 4:   
+                                this.jBM12.setBackground(Color.green);
+                                break;
+                            case 5:   
+                                this.jBM13.setBackground(Color.green);
+                                break;
+                            case 6:   
+                                this.jBM14.setBackground(Color.green);
+                                break;    
+                            case 7:   
+                                this.jBM15.setBackground(Color.green);
+                                break;    
+                            case 8:   
+                                this.jBM16.setBackground(Color.green);
+                                break;  
+                        }
                 actualizar();
             } else {
                 this.cajaMensajes.append("* ALERTA: No hay espacio en memoria principal ni en memoria secundaria\n");
@@ -1015,11 +1109,181 @@ public class Interfaz extends javax.swing.JFrame {
             this.ponerProcesoListo.setEnabled(true);
             this.bloquearProceso.setEnabled(false);
             procesos[idProceso].setEstado("Suspendido");
+            int idp=contadorProceso;
+                        switch(idp){
+                            case 0:
+                                this.jBM8.setBackground(Color.ORANGE);
+                                break;
+                            case 1:   
+                                this.jBM9.setBackground(Color.ORANGE);
+                                break;
+                            case 2:   
+                                this.jBM10.setBackground(Color.ORANGE);
+                                break;
+                            case 3:   
+                                this.jBM11.setBackground(Color.ORANGE);
+                                break;
+                            case 4:   
+                                this.jBM12.setBackground(Color.ORANGE);
+                                break;
+                            case 5:   
+                                this.jBM13.setBackground(Color.ORANGE);
+                                break;
+                            case 6:   
+                                this.jBM14.setBackground(Color.ORANGE);
+                                break;    
+                            case 7:   
+                                this.jBM15.setBackground(Color.ORANGE);
+                                break;    
+                            case 8:   
+                                this.jBM16.setBackground(Color.ORANGE);
+                                break;  
+                        }
             actualizar();
         } else {
             this.cajaMensajes.append("* ALERTA: No hay suficiente espacio en la memoria secundaria para suspender el proceso\n");
         }
     }//GEN-LAST:event_suspenderProcesoActionPerformed
+
+    private void jBM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBM1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBM1ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        this.jBM1.setBackground(Color.LIGHT_GRAY);
+        this.jBM2.setBackground(Color.LIGHT_GRAY);
+        this.jBM3.setBackground(Color.LIGHT_GRAY);
+        this.jBM4.setBackground(Color.LIGHT_GRAY);
+        this.jBM5.setBackground(Color.LIGHT_GRAY);
+        this.jBM6.setBackground(Color.LIGHT_GRAY);
+        this.jBM7.setBackground(Color.LIGHT_GRAY);
+        this.jBM8.setBackground(Color.LIGHT_GRAY);
+        this.jBM9.setBackground(Color.LIGHT_GRAY);
+        this.jBM10.setBackground(Color.LIGHT_GRAY);
+        this.jBM11.setBackground(Color.LIGHT_GRAY);
+        this.jBM12.setBackground(Color.LIGHT_GRAY);
+        this.jBM13.setBackground(Color.LIGHT_GRAY);
+        this.jBM14.setBackground(Color.LIGHT_GRAY);
+        this.jBM15.setBackground(Color.LIGHT_GRAY);
+        this.jBM16.setBackground(Color.LIGHT_GRAY);
+        this.jBM17.setBackground(Color.LIGHT_GRAY);
+        this.jBM18.setBackground(Color.LIGHT_GRAY);
+        this.jBM19.setBackground(Color.LIGHT_GRAY);
+        this.jBM20.setBackground(Color.LIGHT_GRAY);
+        this.jBM21.setBackground(Color.LIGHT_GRAY);
+        this.jBM22.setBackground(Color.LIGHT_GRAY);
+        this.jBM23.setBackground(Color.LIGHT_GRAY);
+        this.jBM24.setBackground(Color.LIGHT_GRAY);
+        
+        this.jBM1.setBackground(Color.green);
+        this.jBM2.setBackground(Color.green);
+        this.jBM3.setBackground(Color.green);
+        this.jBM4.setBackground(Color.green);
+        this.jBM5.setBackground(Color.green);
+        this.jBM6.setBackground(Color.green);
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        this.jBM1.setBackground(Color.LIGHT_GRAY);
+        this.jBM2.setBackground(Color.LIGHT_GRAY);
+        this.jBM3.setBackground(Color.LIGHT_GRAY);
+        this.jBM4.setBackground(Color.LIGHT_GRAY);
+        this.jBM5.setBackground(Color.LIGHT_GRAY);
+        this.jBM6.setBackground(Color.LIGHT_GRAY);
+        this.jBM7.setBackground(Color.LIGHT_GRAY);
+        this.jBM8.setBackground(Color.LIGHT_GRAY);
+        this.jBM9.setBackground(Color.LIGHT_GRAY);
+        this.jBM10.setBackground(Color.LIGHT_GRAY);
+        this.jBM11.setBackground(Color.LIGHT_GRAY);
+        this.jBM12.setBackground(Color.LIGHT_GRAY);
+        this.jBM13.setBackground(Color.LIGHT_GRAY);
+        this.jBM14.setBackground(Color.LIGHT_GRAY);
+        this.jBM15.setBackground(Color.LIGHT_GRAY);
+        this.jBM16.setBackground(Color.LIGHT_GRAY);
+        this.jBM17.setBackground(Color.LIGHT_GRAY);
+        this.jBM18.setBackground(Color.LIGHT_GRAY);
+        this.jBM19.setBackground(Color.LIGHT_GRAY);
+        this.jBM20.setBackground(Color.LIGHT_GRAY);
+        this.jBM21.setBackground(Color.LIGHT_GRAY);
+        this.jBM22.setBackground(Color.LIGHT_GRAY);
+        this.jBM23.setBackground(Color.LIGHT_GRAY);
+        this.jBM24.setBackground(Color.LIGHT_GRAY);
+        
+        this.jBM1.setBackground(Color.green);
+        this.jBM2.setBackground(Color.green);
+        this.jBM3.setBackground(Color.green);
+        this.jBM4.setBackground(Color.green);
+        this.jBM5.setBackground(Color.green);
+        this.jBM6.setBackground(Color.green);
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        this.jBM1.setBackground(Color.LIGHT_GRAY);
+        this.jBM2.setBackground(Color.LIGHT_GRAY);
+        this.jBM3.setBackground(Color.LIGHT_GRAY);
+        this.jBM4.setBackground(Color.LIGHT_GRAY);
+        this.jBM5.setBackground(Color.LIGHT_GRAY);
+        this.jBM6.setBackground(Color.LIGHT_GRAY);
+        this.jBM7.setBackground(Color.LIGHT_GRAY);
+        this.jBM8.setBackground(Color.LIGHT_GRAY);
+        this.jBM9.setBackground(Color.LIGHT_GRAY);
+        this.jBM10.setBackground(Color.LIGHT_GRAY);
+        this.jBM11.setBackground(Color.LIGHT_GRAY);
+        this.jBM12.setBackground(Color.LIGHT_GRAY);
+        this.jBM13.setBackground(Color.LIGHT_GRAY);
+        this.jBM14.setBackground(Color.LIGHT_GRAY);
+        this.jBM15.setBackground(Color.LIGHT_GRAY);
+        this.jBM16.setBackground(Color.LIGHT_GRAY);
+        this.jBM17.setBackground(Color.LIGHT_GRAY);
+        this.jBM18.setBackground(Color.LIGHT_GRAY);
+        this.jBM19.setBackground(Color.LIGHT_GRAY);
+        this.jBM20.setBackground(Color.LIGHT_GRAY);
+        this.jBM21.setBackground(Color.LIGHT_GRAY);
+        this.jBM22.setBackground(Color.LIGHT_GRAY);
+        this.jBM23.setBackground(Color.LIGHT_GRAY);
+        this.jBM24.setBackground(Color.LIGHT_GRAY);
+        
+        this.jBM1.setBackground(Color.green);
+        this.jBM2.setBackground(Color.green);
+        this.jBM3.setBackground(Color.green);
+        this.jBM4.setBackground(Color.green);
+        this.jBM6.setBackground(Color.green);
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+        this.jBM1.setBackground(Color.LIGHT_GRAY);
+        this.jBM2.setBackground(Color.LIGHT_GRAY);
+        this.jBM3.setBackground(Color.LIGHT_GRAY);
+        this.jBM4.setBackground(Color.LIGHT_GRAY);
+        this.jBM5.setBackground(Color.LIGHT_GRAY);
+        this.jBM6.setBackground(Color.LIGHT_GRAY);
+        this.jBM7.setBackground(Color.LIGHT_GRAY);
+        this.jBM8.setBackground(Color.LIGHT_GRAY);
+        this.jBM9.setBackground(Color.LIGHT_GRAY);
+        this.jBM10.setBackground(Color.LIGHT_GRAY);
+        this.jBM11.setBackground(Color.LIGHT_GRAY);
+        this.jBM12.setBackground(Color.LIGHT_GRAY);
+        this.jBM13.setBackground(Color.LIGHT_GRAY);
+        this.jBM14.setBackground(Color.LIGHT_GRAY);
+        this.jBM15.setBackground(Color.LIGHT_GRAY);
+        this.jBM16.setBackground(Color.LIGHT_GRAY);
+        this.jBM17.setBackground(Color.LIGHT_GRAY);
+        this.jBM18.setBackground(Color.LIGHT_GRAY);
+        this.jBM19.setBackground(Color.LIGHT_GRAY);
+        this.jBM20.setBackground(Color.LIGHT_GRAY);
+        this.jBM21.setBackground(Color.LIGHT_GRAY);
+        this.jBM22.setBackground(Color.LIGHT_GRAY);
+        this.jBM23.setBackground(Color.LIGHT_GRAY);
+        this.jBM24.setBackground(Color.LIGHT_GRAY);
+        
+        this.jBM1.setBackground(Color.green);
+        this.jBM2.setBackground(Color.green);
+        this.jBM3.setBackground(Color.green);
+
+        this.jBM5.setBackground(Color.green);
+        this.jBM6.setBackground(Color.green);
+        this.jBM7.setBackground(Color.green);
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1069,18 +1333,6 @@ public class Interfaz extends javax.swing.JFrame {
         }
     }
 
-    private void actualizarMemoriaSecundaria() {
-        this.cajaMemoriaSecundaria.setText("");
-        for (int i = 0; i < this.memoriaVirtual.getAlmacenamiento().length; i++) {
-            if (this.memoriaVirtual.getAlmacenamiento()[i].getIdProceso() != null && this.memoriaVirtual.getAlmacenamiento()[i].getIdPagina() != null) {
-                this.cajaMemoriaSecundaria.append("ID Proceso: " + Integer.toString(this.memoriaVirtual.getAlmacenamiento()[i].getIdProceso()) + " Nombre del Proceso: " + this.memoriaVirtual.getAlmacenamiento()[i].getNombreProceso() + " Nro. Pagina: " + Integer.toString(this.memoriaVirtual.getAlmacenamiento()[i].getIdPagina()) + "\n");
-            }
-        }
-        if (this.cajaMemoriaSecundaria.getText().equals("")) {
-            this.cajaMemoriaSecundaria.append("Memoria secundaria vacia");
-        }
-    }
-
     private void moverFromMemoriaToAlmacenamiento(int id) {
         int mitad = (this.procesos[id].getCantidadPaginas() / 2);
         if (mitad < 1) {
@@ -1121,7 +1373,6 @@ public class Interfaz extends javax.swing.JFrame {
         this.labelMemoriaPU.setText(Integer.toString(memoriaVirtual.getMemoriaPrincipalTotal() - memoriaVirtual.getMemoriaPrincipal()));
         actualizarProcesos();
         actualizarMemoriaPrincipal();
-        actualizarMemoriaSecundaria();
     }
 
     private void actualizarProcesos() {
@@ -1134,8 +1385,10 @@ public class Interfaz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bloquearProceso;
     private javax.swing.JButton buscarProceso;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JTextArea cajaMemoriaPrincipal;
-    private javax.swing.JTextArea cajaMemoriaSecundaria;
     private javax.swing.JTextArea cajaMensajes;
     private javax.swing.JTextArea cajaProcesos;
     private javax.swing.JButton crearProceso;
@@ -1166,7 +1419,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton jBM7;
     private javax.swing.JButton jBM8;
     private javax.swing.JButton jBM9;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -1186,10 +1438,12 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel labelCantMarcosP;
@@ -1198,27 +1452,20 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel labelEBSP;
     private javax.swing.JLabel labelGestionarP;
     private javax.swing.JLabel labelGestionarP1;
-    private javax.swing.JLabel labelGestionarP2;
     private javax.swing.JLabel labelGestionarP3;
     private javax.swing.JLabel labelInformacionGeneral;
     private javax.swing.JLabel labelMemoriaPD;
     private javax.swing.JLabel labelMemoriaPU;
     private javax.swing.JLabel labelMemoriaSD;
     private javax.swing.JLabel labelNombreProceso;
-    private javax.swing.JLabel labelTamMP;
     private javax.swing.JLabel labelTamMemoriaP;
     private javax.swing.JLabel labelTamMemoriaS;
     private javax.swing.JLabel labelTamPag;
-    private javax.swing.JLabel labelTamPagina;
     private javax.swing.JLabel labelTamañoProceso;
     private javax.swing.JLabel labelTituloInformacion;
-    private javax.swing.JLabel labelTituloInformacion1;
     private javax.swing.JTextField nombreProceso;
     private javax.swing.JButton ponerProcesoListo;
     private javax.swing.JButton suspenderProceso;
-    private javax.swing.JTextField tamMemoriaP;
-    private javax.swing.JTextField tamMemoriaS;
-    private javax.swing.JTextField tamPag;
     private javax.swing.JTextField tamProceso;
     // End of variables declaration//GEN-END:variables
 }

@@ -7,7 +7,7 @@ package logica;
 
 /**
  *
- * @author Aran_
+ * @author SO 20211
  */
 public class Pagina {
 

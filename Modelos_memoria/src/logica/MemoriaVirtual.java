@@ -14,7 +14,7 @@ import javax.swing.JTextArea;
 
 /**
  *
- * @author Aran_
+ * @author SO 20211
  */
 public class MemoriaVirtual {
 
